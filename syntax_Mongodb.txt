@@ -1,0 +1,23 @@
+show dbs
+
+use _databaseName_
+meaning create or use Database!
+
+db.createCollection("mycollection")
+meaning create collections!
+
+show collections 
+
+db.mycollection.drop()
+meaning drop/delete Database!
+
+
+For drop database
+>use mydb
+switched to db mydb
+>db.dropDatabase()
+>{ "dropped" : "mydb", "ok" : 1 }
+
+db.collection.deleteOne()
+meaning delete data in collection!
+example: db.dormitory.deleteOne( { dorm_id: ObjectId("67249758221022df260bac14") } )

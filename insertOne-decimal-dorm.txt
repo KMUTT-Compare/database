@@ -1,0 +1,102 @@
+db.dormitory.insertOne({
+    "dorm_id": 1,
+    "name": "The Cozy Dorm",
+    "status": "empty",
+    "address": {
+      "street": "123 Sukhumvit Road",
+      "subdistrict": "Khlong Toei",
+      "district": "Khlong Toei",
+      "province": "Bangkok",
+      "postalCode": "10110"
+    },
+    "roomCount": 20,
+    "type": "all",
+    "size": Decimal128.fromString("25.5"), // ใช้ Decimal128
+    "min_price": Decimal128.fromString("3000.00"), // ใช้ Decimal128
+    "max_price": Decimal128.fromString("5000.00"), // ใช้ Decimal128
+    "distance": Decimal128.fromString("1.5"), // ใช้ Decimal128
+    "created_at": new Timestamp(1672531199, 1),
+    "updated_at": new Timestamp(1672531199, 1),
+    "image": [
+      "https://example.com/image1.jpg",
+      "https://example.com/image2.jpg"
+    ],
+    "building_facility": ["CCTV","WiFi","24-hour security"],
+    "room_facility": ["Air conditioning","Private bathroom","Desk"],
+    "staff": 1
+});
+
+--2
+db.dormitory.insertOne({
+    "dorm_id": 2,
+    "name": "Student Residence",
+    "status": "full",
+    "address": {
+      "street": "456 Phahonyothin Road",
+      "subdistrict": "Chatuchak",
+      "district": "Chatuchak",
+      "province": "Bangkok",
+      "postalCode": "10900"
+    },
+    "roomCount": 30,
+    "type": "f",
+    "size": Decimal128.fromString("20.0"), // ใช้ Decimal128
+    "min_price": Decimal128.fromString("4000.00"), // ใช้ Decimal128
+    "max_price": Decimal128.fromString("6000.00"), // ใช้ Decimal128
+    "distance": Decimal128.fromString("2.0"), // ใช้ Decimal128
+    "created_at": new Timestamp(1672617600, 1), 
+    "updated_at": new Timestamp(1672617600, 1), 
+    "image": [
+      "https://example.com/image3.jpg",
+      "https://example.com/image4.jpg"
+    ],
+    "building_facility": [
+      "Gym",
+      "Laundry",
+      "Study room"
+    ],
+    "room_facility": [
+      "Wardrobe",
+      "Refrigerator",
+      "WiFi"
+    ],
+    "staff": 2
+  });
+  
+  
+ --3
+  db.dormitory.insertOne({
+    "dorm_id": 3,
+    "name": "Modern Living",
+    "status": "empty",
+    "address": {
+      "street": "789 Ratchadapisek Road",
+      "subdistrict": "Din Daeng",
+      "district": "Din Daeng",
+      "province": "Bangkok",
+      "postalCode": "10400"
+    },
+    "roomCount": 15,
+    "type": "m",
+    "size": Decimal128.fromString("30.0"), // ใช้ Decimal128
+    "min_price": Decimal128.fromString("5000.00"), // ใช้ Decimal128
+    "max_price": Decimal128.fromString("7000.00"), // ใช้ Decimal128
+    "distance": Decimal128.fromString("1.0"), // ใช้ Decimal128
+    "created_at": new Timestamp(1672704000, 1), 
+    "updated_at": new Timestamp(1672704000, 1), 
+    "image": [
+      "https://example.com/image5.jpg",
+      "https://example.com/image6.jpg"
+    ],
+    "building_facility": [
+      "Parking",
+      "Garden",
+      "Common area"
+    ],
+    "room_facility": [
+      "Television",
+      "Balcony",
+      "Desk"
+    ],
+    "staff": 3
+  });

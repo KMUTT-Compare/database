@@ -1,0 +1,170 @@
+db.createCollection("staff", {
+  validator: {
+    $jsonSchema: {
+      "bsonType": "object",
+      "title": "staff",
+      "required": ["staff_id", "staffName", "address", "email", "phone"],
+      "properties": {
+        "staff_id": {
+          "bsonType": "int"
+        },
+        "staffName": {
+          "bsonType": "string"
+        },
+        "address": {
+          "bsonType": "string"
+        },
+        "email": {
+          "bsonType": "string"
+        },
+        "phone": {
+          "bsonType": "string"
+        }
+      }
+    }
+  }
+});
+---------------
+db.createCollection("user", {
+  validator: {
+    $jsonSchema: {
+      "bsonType": "object",
+      "title": "user",
+      "required": ["user_id", "username", "password", "email", "role", "createdOn", "updatedOn"],
+      "properties": {
+        "user_id": {
+          "bsonType": "int"
+        },
+        "username": {
+          "bsonType": "string"
+        },
+        "password": {
+          "bsonType": "string"
+        },
+        "email": {
+          "bsonType": "string"
+        },
+        "role": {
+          "enum": ['admin', 'user', 'guest']
+        },
+        "createdOn": {
+          "bsonType": "timestamp"
+        },
+        "updatedOn": {
+          "bsonType": "timestamp"
+        }
+      }
+    }
+  }
+});
+---------------
+db.createCollection("dormitory", {
+  validator: {
+    $jsonSchema: {
+      "bsonType": "object",
+      "title": "dormitory",
+      "required": ["dorm_id", "name", "status", "address", "roomCount", "type", "size", "min_price", "max_price", "distance", "created_at", "updated_at", "building_facility", "room_facility", "staff"],
+      "properties": {
+        "dorm_id": {
+          "bsonType": "int"
+        },
+        "name": {
+          "bsonType": "string"
+        },
+        "status": {
+          "enum": ['empty', 'full']
+        },
+        "address": {
+          "bsonType": "object",
+          "title": "object",
+          "required": ["street", "subdistrict", "district", "province", "postalCode"],
+          "properties": {
+            "street": {
+              "bsonType": "string"
+            },
+            "subdistrict": {
+              "bsonType": "string"
+            },
+            "district": {
+              "bsonType": "string"
+            },
+            "province": {
+              "bsonType": "string"
+            },
+            "postalCode": {
+              "bsonType": "string"
+            }
+          }
+        },
+        "roomCount": {
+          "bsonType": "int"
+        },
+        "type": {
+          "enum": ['all', 'f', 'm']
+        },
+        "size": {
+          "bsonType": "decimal"
+        },
+        "min_price": {
+          "bsonType": "decimal"
+        },
+        "max_price": {
+          "bsonType": "decimal"
+        },
+        "distance": {
+          "bsonType": "decimal"
+        },
+        "created_at": {
+          "bsonType": "timestamp"
+        },
+        "updated_at": {
+          "bsonType": "timestamp"
+        },
+        "image": {
+          "bsonType": "array",
+          "items": {
+            "bsonType": "string"
+          }
+        },
+        "building_facility": {
+          "bsonType": "array",
+          "items": {
+            "bsonType": "string"
+          }
+        },
+        "room_facility": {
+          "bsonType": "array",
+          "items": {
+            "bsonType": "string"
+          }
+        },
+        "staff": {
+          "bsonType": "int"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+});
+---------------
+db.createCollection("favorite", {
+  validator: {
+    $jsonSchema: {
+      "bsonType": "object",
+      "title": "favorite",
+      "required": ["fav_id", "dormitory", "user"],
+      "properties": {
+        "fav_id": {
+          "bsonType": "int"
+        },
+        "dormitory": {
+          "bsonType": "int"
+        },
+        "user": {
+          "bsonType": "int"
+        }
+      }
+    }
+  }
+});
