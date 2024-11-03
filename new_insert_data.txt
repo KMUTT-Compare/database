@@ -1,30 +1,30 @@
 db.staff.insertMany([
   {
-    "staff_id": 1,
+    "staffId": 1,
     "staffName": "Somchai Jaid",
     "address": "123/4 Sukhumvit Road, Khlong Tan, Watthana, Bangkok 10110",
     "email": "somchai.jaid@gmail.com",
-    "phone": "081-234-5678"
+    "phone": "0812345678"
   },
   {
-    "staff_id": 2,
+    "staffId": 2,
     "staffName": "Ornthai Suayngam",
     "address": "456/7 Rama IX Road, Suan Luang, Suan Luang, Bangkok 10250",
     "email": "ornthai.suayngam@gmail.com",
-    "phone": "082-345-6789"
+    "phone": "0823456789"
   },
   {
-    "staff_id": 3,
+    "staffId": 3,
     "staffName": "Prapha Saensuk",
     "address": "789/8 Charoen Krung Road, Bang Rak, Bangkok 10500",
     "email": "prapha.saensuk@gmail.com",
-    "phone": "083-456-7890"
+    "phone": "0834567890"
   }
 ]);
 --------------------
 db.user.insertMany([
   {
-    "user_id": 1,
+    "userId": 1,
     "username": "john_doe",
     "password": "password123",
     "email": "john.doe@example.com",
@@ -33,7 +33,7 @@ db.user.insertMany([
     "updatedOn": new Timestamp(1672531199, 1)  
   },
   {
-    "user_id": 2,
+    "userId": 2,
     "username": "jane_smith",
     "password": "securePass456",
     "email": "jane.smith@example.com",
@@ -42,7 +42,7 @@ db.user.insertMany([
     "updatedOn": new Timestamp(1672617600, 1)  
   },
   {
-    "user_id": 3,
+    "userId": 3,
     "username": "guest_user",
     "password": "guestPass789",
     "email": "guest@example.com",
@@ -54,7 +54,7 @@ db.user.insertMany([
 --------------------
 db.dormitory.insertMany([
   {
-    "dorm_id": 1,
+    "dormId": 1,
     "name": "The Cozy Dorm",
     "status": "empty",
     "address": {
@@ -89,7 +89,7 @@ db.dormitory.insertMany([
     "staff": 1
   },
   {
-    "dorm_id": 2,
+    "dormId": 2,
     "name": "Student Residence",
     "status": "full",
     "address": {
@@ -124,7 +124,7 @@ db.dormitory.insertMany([
     "staff": 2
   },
   {
-    "dorm_id": 3,
+    "dormId": 3,
     "name": "Modern Living",
     "status": "empty",
     "address": {
@@ -162,17 +162,17 @@ db.dormitory.insertMany([
 --------------------
 db.favorite.insertMany([
   {
-    "fav_id": 1,
+    "favId": 1,
     "dormitory": 1, 
     "user": 1      
   },
   {
-    "fav_id": 2,
+    "favId": 2,
     "dormitory": 2, 
     "user": 2      
   },
   {
-    "fav_id": 3,
+    "favId": 3,
     "dormitory": 3,
     "user": 3      
   }

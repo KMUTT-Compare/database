@@ -1,5 +1,5 @@
 db.dormitory.insertOne({
-    "dorm_id": 1,
+    "dormId": 1,
     "name": "The Cozy Dorm",
     "status": "empty",
     "address": {
@@ -28,7 +28,7 @@ db.dormitory.insertOne({
 
 --2
 db.dormitory.insertOne({
-    "dorm_id": 2,
+    "dormId": 2,
     "name": "Student Residence",
     "status": "full",
     "address": {
@@ -66,7 +66,7 @@ db.dormitory.insertOne({
   
  --3
   db.dormitory.insertOne({
-    "dorm_id": 3,
+    "dormId": 3,
     "name": "Modern Living",
     "status": "empty",
     "address": {

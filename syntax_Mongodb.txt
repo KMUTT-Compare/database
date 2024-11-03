@@ -5,11 +5,13 @@ meaning create or use Database!
 
 db.createCollection("mycollection")
 meaning create collections!
+example: db.createCollection("staff")
 
 show collections 
 
 db.mycollection.drop()
 meaning drop/delete Database!
+example: db.staff.drop()
 
 
 For drop database
@@ -21,3 +23,4 @@ switched to db mydb
 db.collection.deleteOne()
 meaning delete data in collection!
 example: db.dormitory.deleteOne( { dorm_id: ObjectId("67249758221022df260bac14") } )
+		 db.staff.deleteOne( { staffName: "Nanthawan ice" } )

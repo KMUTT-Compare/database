@@ -9,7 +9,7 @@
 			"cols": [
 				{
 					"id": "d6f49f5b-0027-4c67-aef2-a6de24dcbd33",
-					"name": "dorm_id",
+					"name": "dormId",
 					"datatype": "int",
 					"param": "",
 					"pk": true,
@@ -321,7 +321,7 @@
 			"cols": [
 				{
 					"id": "cc1628bb-ed47-4a0b-b44b-d1275e9deeb6",
-					"name": "staff_id",
+					"name": "staffId",
 					"datatype": "int",
 					"param": "",
 					"pk": true,
@@ -445,7 +445,7 @@
 			"cols": [
 				{
 					"id": "332114ca-b136-44f9-b083-e562d3d52da6",
-					"name": "fav_id",
+					"name": "favId",
 					"datatype": "int",
 					"param": "",
 					"pk": true,
@@ -536,7 +536,7 @@
 			"cols": [
 				{
 					"id": "7dd278ea-fdba-4556-bbe2-a547022232e4",
-					"name": "user_id",
+					"name": "userId",
 					"datatype": "int",
 					"param": "",
 					"pk": true,
@@ -919,7 +919,7 @@
 		"def_collation": "",
 		"def_others": "",
 		"connectionVersion": "",
-		"lastSaved": 1730453242140,
+		"lastSaved": 1730629681635,
 		"modelScriptsDir": "C:\\Users\\User\\Desktop"
 	},
 	"otherObjects": {},
