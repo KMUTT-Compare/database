@@ -919,8 +919,10 @@
 		"def_collation": "",
 		"def_others": "",
 		"connectionVersion": "",
-		"lastSaved": 1730629681635,
-		"modelScriptsDir": "C:\\Users\\User\\Desktop"
+		"lastSaved": 1730648497614,
+		"modelScriptsDir": "C:\\Users\\User\\Desktop\\Mongodb\\script",
+		"modelHTMLReportDir": "C:\\Users\\User\\Desktop\\Mongodb\\documents",
+		"modelPdfReportPath": "C:\\Users\\User\\Desktop\\Capstone1.pdf"
 	},
 	"otherObjects": {},
 	"diagrams": {
@@ -951,8 +953,8 @@
 				},
 				"e9798adf-10e7-40dd-a5ab-52dbe393d3e4": {
 					"referencedItemId": "e9798adf-10e7-40dd-a5ab-52dbe393d3e4",
-					"x": 212,
-					"y": 474,
+					"x": 165,
+					"y": 227,
 					"gHeight": 117,
 					"gWidth": 205,
 					"color": "#ffffff",
