@@ -31,8 +31,8 @@ db.user.insertMany([
     "password": "password123",
     "email": "john.doe@example.com",
     "role": "admin",
-    "createdOn": new Timestamp(1672531199, 1), 
-    "updatedOn": new Timestamp(1672531199, 1)  
+    "createdOn": new Date("2024-05-11T12:00:00Z"), 
+    "updatedOn": new Date("2024-05-31T12:00:00Z")  
   },
   {
     "userId": 2,
@@ -40,8 +40,8 @@ db.user.insertMany([
     "password": "securePass456",
     "email": "jane.smith@example.com",
     "role": "user",
-    "createdOn": new Timestamp(1672617600, 1), 
-    "updatedOn": new Timestamp(1672617600, 1)  
+    "createdOn": new Date("2024-06-15T12:00:00Z"), 
+    "updatedOn": new Date("2024-07-08T12:00:00Z")  
   },
   {
     "userId": 3,
@@ -49,8 +49,8 @@ db.user.insertMany([
     "password": "guestPass789",
     "email": "guest@example.com",
     "role": "guest",
-    "createdOn": new Timestamp(1672704000, 1),
-    "updatedOn": new Timestamp(1672704000, 1)  
+    "createdOn": new Date("2024-07-22T12:00:00Z"),
+    "updatedOn": new Date("2024-08-15T12:00:00Z")  
   }
 ]);
 
@@ -58,18 +58,18 @@ db.user.insertMany([
 db.favorite.insertMany([
   {
     "favId": 1,
-    "dormitory": 1, 
-    "user": 1      
+    "dormId": 1, 
+    "userId": 1      
   },
   {
     "favId": 2,
-    "dormitory": 2, 
-    "user": 2      
+    "dormId": 2, 
+    "userId": 2      
   },
   {
     "favId": 3,
-    "dormitory": 3,
-    "user": 3      
+    "dormId": 3,
+    "userId": 3      
   }
 ]);
 

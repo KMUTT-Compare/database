@@ -48,10 +48,10 @@ db.createCollection("user", {
           "enum": ['admin', 'user', 'guest']
         },
         "createdOn": {
-          "bsonType": "timestamp"
+          "bsonType": "date"
         },
         "updatedOn": {
-          "bsonType": "timestamp"
+          "bsonType": "date"
         }
       }
     }
@@ -153,15 +153,15 @@ db.createCollection("favorite", {
     $jsonSchema: {
       "bsonType": "object",
       "title": "favorite",
-      "required": ["favId", "dormitory", "user"],
+      "required": ["favId", "dormId", "userId"],
       "properties": {
         "favId": {
           "bsonType": "int"
         },
-        "dormitory": {
+        "dormId": {
           "bsonType": "int"
         },
-        "user": {
+        "userId": {
           "bsonType": "int"
         }
       }
