@@ -1,3 +1,4 @@
+---------DORMITORIES-----------
 db.dormitory.insertOne({
     "dormId": 1,
     "name": "The Cozy Dorm",
@@ -15,8 +16,8 @@ db.dormitory.insertOne({
     "min_price": Decimal128.fromString("3000.00"), // ใช้ Decimal128
     "max_price": Decimal128.fromString("5000.00"), // ใช้ Decimal128
     "distance": Decimal128.fromString("1.5"), // ใช้ Decimal128
-    "created_at": new Timestamp(1672531199, 1),
-    "updated_at": new Timestamp(1672531199, 1),
+    "created_at": new Date("2024-11-15T12:00:00Z"),
+    "updated_at": new Date("2024-11-04T12:00:00Z"),
     "image": [
       "https://example.com/image1.jpg",
       "https://example.com/image2.jpg"
@@ -44,8 +45,8 @@ db.dormitory.insertOne({
     "min_price": Decimal128.fromString("4000.00"), // ใช้ Decimal128
     "max_price": Decimal128.fromString("6000.00"), // ใช้ Decimal128
     "distance": Decimal128.fromString("2.0"), // ใช้ Decimal128
-    "created_at": new Timestamp(1672617600, 1), 
-    "updated_at": new Timestamp(1672617600, 1), 
+    "created_at": new Date("2024-08-10T12:00:00Z"),
+    "updated_at": new Date("2024-09-01T12:00:00Z"),
     "image": [
       "https://example.com/image3.jpg",
       "https://example.com/image4.jpg"
@@ -82,8 +83,8 @@ db.dormitory.insertOne({
     "min_price": Decimal128.fromString("5000.00"), // ใช้ Decimal128
     "max_price": Decimal128.fromString("7000.00"), // ใช้ Decimal128
     "distance": Decimal128.fromString("1.0"), // ใช้ Decimal128
-    "created_at": new Timestamp(1672704000, 1), 
-    "updated_at": new Timestamp(1672704000, 1), 
+    "created_at": new Date("2024-09-01T12:00:00Z"),
+    "updated_at": new Date("2024-09-05T12:00:00Z"),
     "image": [
       "https://example.com/image5.jpg",
       "https://example.com/image6.jpg"

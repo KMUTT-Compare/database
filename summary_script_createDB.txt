@@ -115,10 +115,10 @@ db.createCollection("dormitory", {
           "bsonType": "decimal"
         },
         "created_at": {
-          "bsonType": "timestamp"
+          "bsonType": "date"
         },
         "updated_at": {
-          "bsonType": "timestamp"
+          "bsonType": "date"
         },
         "image": {
           "bsonType": "array",
