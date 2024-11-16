@@ -24,7 +24,7 @@ db.dormitory.insertOne({
     ],
     "building_facility": ["CCTV","WiFi","24-hour security"],
     "room_facility": ["Air conditioning","Private bathroom","Desk"],
-    "staff": 1
+    "staffId": 1
 });
 
 --2
@@ -61,7 +61,7 @@ db.dormitory.insertOne({
       "Refrigerator",
       "WiFi"
     ],
-    "staff": 2
+    "staffId": 2
   });
   
   
@@ -99,5 +99,5 @@ db.dormitory.insertOne({
       "Balcony",
       "Desk"
     ],
-    "staff": 3
+    "staffId": 3
   });
