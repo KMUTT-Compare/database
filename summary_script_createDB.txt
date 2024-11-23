@@ -80,7 +80,7 @@ db.createCollection("dormitory", {
           "required": ["dormNumber","street", "subdistrict", "district", "province", "postalCode"],
           "properties": {
 			"dormNumber": {
-              "bsonType": "int"
+              "bsonType": "string"
             },
             "street": {
               "bsonType": "string"
