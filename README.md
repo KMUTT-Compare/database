@@ -28,3 +28,4 @@ db.mycollection.drop()
 use kmutt_dormitories
 db.dropDatabase()
 ```
+![c4b4cd2eb69f3d1e5fb393788723ac02](https://github.com/user-attachments/assets/307c4655-b405-44c9-9419-ac686a233040)
