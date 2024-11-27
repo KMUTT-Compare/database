@@ -10,7 +10,7 @@
 คือ Database software ประเภท NoSQL เป็นฐานข้อมูลที่มีความยืดหยุ่นมาก เหมาะกับข้อมูลที่ไม่มีโครงสร้างตายตัว เช่น JSON หรือ Document <br/>
 **Version:** 4.4
 
-##Basic Commands
+## Basic Commands <br/>
 -สร้าง หรือใช้งาน Database เช่น kmutt_dormitories
 ```
 use kmutt_dormitories
