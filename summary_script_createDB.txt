@@ -24,7 +24,7 @@ db.createCollection("staff", {
     }
   }
 });
----------------
+---------------------------------------
 db.createCollection("user", {
   validator: {
     $jsonSchema: {
@@ -57,7 +57,8 @@ db.createCollection("user", {
     }
   }
 });
----------------
+---------------------------------------
+
 db.createCollection("dormitory", {
   validator: {
     $jsonSchema: {
@@ -150,7 +151,8 @@ db.createCollection("dormitory", {
   "validationLevel": "strict",
   "validationAction": "error"
 });
----------------
+---------------------------------------
+
 db.createCollection("favorite", {
   validator: {
     $jsonSchema: {
