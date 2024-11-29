@@ -4,7 +4,7 @@ db.dormitory.insertOne({
     "name": "The Cozy Dorm",
     "status": "empty",
     "address": {
-	  "dormNumber": "111",
+	  "dormNumber": 111,
       "street": "Sukhumvit Road",
       "subdistrict": "Khlong Toei",
       "district": "Khlong Toei",
@@ -34,7 +34,7 @@ db.dormitory.insertOne({
     "name": "Student Residence",
     "status": "full",
     "address": {
-	  "dormNumber": "222",
+	  "dormNumber": 222,
       "street": "Phahonyothin Road",
       "subdistrict": "Chatuchak",
       "district": "Chatuchak",
@@ -73,7 +73,7 @@ db.dormitory.insertOne({
     "name": "Modern Living",
     "status": "empty",
     "address": {
-	  "dormNumber": "333",
+	  "dormNumber": 333,
       "street": "Ratchadapisek Road",
       "subdistrict": "Din Daeng",
       "district": "Din Daeng",

@@ -1,29 +1,51 @@
 db.createCollection("staff", {
-    validator: {
-      $jsonSchema: {
-        "bsonType": "object",
-        "title": "staff",
-        "required": ["staffId", "staffName", "address", "email", "phone"],
-        "properties": {
-          "staffId": {
-            "bsonType": "int"
-          },
-          "staffName": {
-            "bsonType": "string"
-          },
-          "address": {
-            "bsonType": "string"
-          },
-          "email": {
-            "bsonType": "string"
-          },
-          "phone": {
-            "bsonType": "string"
+  validator: {
+    $jsonSchema: {
+      "bsonType": "object",
+      "title": "staff",
+      "required": ["staffId", "staffName", "address", "email", "phone"],
+      "properties": {
+        "staffId": {
+          "bsonType": "int"
+        },
+        "staffName": {
+          "bsonType": "string"
+        },
+        "address": {
+          "bsonType": "object",
+          "title": "object",
+          "required": ["dormNumber", "street", "subdistrict", "district", "province", "postalCode"],
+          "properties": {
+		  	"dormNumber": {
+              "bsonType": "string"
+            },
+            "street": {
+              "bsonType": "string"
+            },
+            "subdistrict": {
+              "bsonType": "string"
+            },
+            "district": {
+              "bsonType": "string"
+            },
+            "province": {
+              "bsonType": "string"
+            },
+            "postalCode": {
+              "bsonType": "string"
+            }
           }
+        },
+        "email": {
+          "bsonType": "string"
+        },
+        "phone": {
+          "bsonType": "string"
         }
       }
     }
-  });
+  }
+});
 //   
   db.createCollection("user", {
     validator: {

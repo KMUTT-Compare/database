@@ -3,25 +3,47 @@ db.staff.insertMany([
   {
     "staffId": 1,
     "staffName": "Somchai Jaid",
-    "address": "123/4 Sukhumvit Road, Khlong Tan, Watthana, Bangkok 10110",
+    "address": {
+	  "dormNumber": "111",
+      "street": "123/4 Sukhumvit Road",
+      "subdistrict": "Khlong Tan",
+      "district": "Watthana",
+      "province": "Bangkok",
+      "postalCode": "10110"
+    },
     "email": "somchai.jaid@gmail.com",
     "phone": "0812345678"
   },
   {
     "staffId": 2,
     "staffName": "Ornthai Suayngam",
-    "address": "456/7 Rama IX Road, Suan Luang, Suan Luang, Bangkok 10250",
+    "address": {
+	  "dormNumber": "222",
+      "street": "456/7 Rama IX Road",
+      "subdistrict": "Suan Luang",
+      "district": "Suan Luang",
+      "province": "Bangkok",
+      "postalCode": "10250"
+    },
     "email": "ornthai.suayngam@gmail.com",
     "phone": "0823456789"
   },
   {
     "staffId": 3,
     "staffName": "Prapha Saensuk",
-    "address": "789/8 Charoen Krung Road, Bang Rak, Bangkok 10500",
+    "address": {
+	  "dormNumber": "333",
+      "street": "789/8 Charoen Krung Road",
+      "subdistrict": "Bang Rak",
+      "district": "Bang Rak",
+      "province": "Bangkok",
+      "postalCode": "10500"
+    },
     "email": "prapha.saensuk@gmail.com",
     "phone": "0834567890"
   }
 ]);
+
 
 ---------USERS-----------
 db.user.insertMany([

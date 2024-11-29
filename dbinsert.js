@@ -3,16 +3,28 @@ db.staff.insertMany([
   {
     "staffId": 1,
     "staffName": "Somchai Jaid",
-    "address": "123/4 Sukhumvit Road, Khlong Tan, Watthana, Bangkok 10110",
+    "address": {
+	  "dormNumber": "111",
+      "street": "123/4 Sukhumvit Road",
+      "subdistrict": "Khlong Tan",
+      "district": "Watthana",
+      "province": "Bangkok",
+      "postalCode": "10110"
+    },
     "email": "somchai.jaid@gmail.com",
     "phone": "0812345678"
   },
   {
     "staffId": 2,
     "staffName": "Ornthai Suayngam",
-    "address": "456/7 Rama IX Road, Suan Luang, Suan Luang, Bangkok 10250",
-    "email": "ornthai.suayngam@gmail.com",
-    "phone": "0823456789"
+    "address": {
+	  "dormNumber": "222",
+      "street": "456/7 Rama IX Road",
+      "subdistrict": "Suan Luang",
+      "district": "Suan Luang",
+      "province": "Bangkok",
+      "postalCode": "10250"
+    }
   }
 ]);
 
@@ -74,8 +86,7 @@ db.dormitory.insertOne({
     "created_at": new Date("2024-11-15T12:00:00Z"),
     "updated_at": new Date("2024-11-04T12:00:00Z"),
     "image": [
-      "https://example.com/image1.jpg",
-      "https://example.com/image2.jpg"
+      "https://example.com/image1.jpg"
     ],
     "building_facility": ["CCTV","WiFi","24-hour security"],
     "room_facility": ["Air conditioning","Private bathroom","Desk"],
@@ -104,8 +115,7 @@ db.dormitory.insertOne({
     "created_at": new Date("2024-08-10T12:00:00Z"),
     "updated_at": new Date("2024-09-01T12:00:00Z"),
     "image": [
-      "https://example.com/image3.jpg",
-      "https://example.com/image4.jpg"
+      "https://example.com/image3.jpg"
     ],
     "building_facility": [
       "Gym",
