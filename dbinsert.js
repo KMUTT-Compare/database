@@ -24,7 +24,9 @@ db.staff.insertMany([
       "district": "Suan Luang",
       "province": "Bangkok",
       "postalCode": "10250"
-    }
+    },
+    "email": "ornthai.suayngam@gmail.com",
+    "phone": "0823456789"
   }
 ]);
 
