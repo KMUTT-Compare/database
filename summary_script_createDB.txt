@@ -12,7 +12,29 @@ db.createCollection("staff", {
           "bsonType": "string"
         },
         "address": {
-          "bsonType": "string"
+          "bsonType": "object",
+          "title": "object",
+          "required": ["dormNumber", "street", "subdistrict", "district", "province", "postalCode"],
+          "properties": {
+		  	"dormNumber": {
+              "bsonType": "string"
+            },
+            "street": {
+              "bsonType": "string"
+            },
+            "subdistrict": {
+              "bsonType": "string"
+            },
+            "district": {
+              "bsonType": "string"
+            },
+            "province": {
+              "bsonType": "string"
+            },
+            "postalCode": {
+              "bsonType": "string"
+            }
+          }
         },
         "email": {
           "bsonType": "string"
@@ -63,7 +85,7 @@ db.createCollection("dormitory", {
     $jsonSchema: {
       "bsonType": "object",
       "title": "dormitory",
-      "required": ["dormId", "name", "status", "address", "roomCount", "type", "size", "min_price", "max_price", "distance", "created_at", "updated_at", "building_facility", "room_facility", "staffId"],
+      "required": ["dormId", "name", "status", "address", "roomCount", "type", "size", "min_price", "max_price", "distance", "created_at", "updated_at", "building_facility", "room_facility", "score", "staffId"],
       "properties": {
         "dormId": {
           "bsonType": "int"
@@ -140,6 +162,9 @@ db.createCollection("dormitory", {
           "items": {
             "bsonType": "string"
           }
+        },
+		"score": {
+          "bsonType": "int"
         },
         "staffId": {
           "bsonType": "int"
