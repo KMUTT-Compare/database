@@ -196,3 +196,52 @@ db.createCollection("favorite", {
     }
   }
 });
+---------------
+db.createCollection("form", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      title: "form",
+      required: [
+        "formId",
+        "form_date",
+        "username",
+        "email",
+        "phone",
+        "date_in",
+        "date_out",
+        "staffId",
+        "dormId"
+      ],
+      properties: {
+        formId: {
+          bsonType: "int"
+        },
+        form_date: {
+          bsonType: "date"
+        },
+        username: {
+          bsonType: "string"
+        },
+        email: {
+          bsonType: "string"
+        },
+        phone: {
+          bsonType: "string"
+        },
+        date_in: {
+          bsonType: "date"
+        },
+        date_out: {
+          bsonType: "date"
+        },
+        staffId: {
+          bsonType: "int"
+        },
+        dormId: {
+          bsonType: "int"
+        }
+      }
+    }
+  }
+});
