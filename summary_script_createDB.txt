@@ -85,7 +85,7 @@ db.createCollection("dormitory", {
     $jsonSchema: {
       "bsonType": "object",
       "title": "dormitory",
-      "required": ["dormId", "dormName", "status", "address", "roomCount", "type", "size", "min_price", "max_price", "distance", "created_at", "updated_at", "building_facility", "room_facility", "score", "staffId"],
+      "required": ["dormId", "dormName", "status", "address", "roomCount", "type", "size", "min_price", "max_price", "distance", "created_at", "updated_at", "building_facility", "room_facility", "count_facilities",  "score", "staffId"],
       "properties": {
         "dormId": {
           "bsonType": "int"
@@ -162,6 +162,9 @@ db.createCollection("dormitory", {
           "items": {
             "bsonType": "string"
           }
+        },
+		"count_facilities": {
+          "bsonType": "int"
         },
 		"score": {
           "bsonType": "int"
