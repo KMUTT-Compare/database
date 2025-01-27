@@ -205,7 +205,7 @@ db.createCollection("form", {
     $jsonSchema: {
       bsonType: "object",
       title: "form",
-      required: ["formId", "form_date", "name", "email", "phone", "date_in", "date_out", "description", "staffId", "dormId"],
+      required: ["formId", "form_date", "name", "email", "phone", "date_in", "date_out", "description", "staffId", "dormId", "userId"],
       properties: {
         formId: {
           bsonType: "int"
@@ -235,6 +235,9 @@ db.createCollection("form", {
           bsonType: "int"
         },
         dormId: {
+          bsonType: "int"
+        },
+		userId: {
           bsonType: "int"
         }
       }

@@ -106,7 +106,8 @@ db.form.insertMany([
     date_out: new Date("2025-01-25"),
 	description: "good dormitory",
     staffId: 1,
-    dormId: 1
+    dormId: 1,
+	userId: 1
   },
   {
     formId: 2,
@@ -118,7 +119,8 @@ db.form.insertMany([
     date_out: new Date("2025-01-28"),
 	description: "what about your new dormitory?",
     staffId: 2,
-    dormId: 2
+    dormId: 2,
+	userId: 2
   },
   {
     formId: 3,
@@ -130,7 +132,8 @@ db.form.insertMany([
     date_out: new Date("2025-02-07"),
 	description: "good location",
     staffId: 3,
-    dormId: 3
+    dormId: 3,
+	userId: 3
 	 }
 ]);
 
