@@ -3,7 +3,7 @@ db.createCollection("staff", {
     $jsonSchema: {
       "bsonType": "object",
       "title": "staff",
-      "required": ["staffId", "staffName", "address", "email", "phone"],
+      "required": ["staffId", "staffName", "staffAddress", "staffEmail", "staffPhone"],
       "properties": {
         "staffId": {
           "bsonType": "int"
@@ -11,7 +11,7 @@ db.createCollection("staff", {
         "staffName": {
           "bsonType": "string"
         },
-        "address": {
+        "staffAddress": {
           "bsonType": "object",
           "title": "object",
           "required": ["dormNumber", "street", "subdistrict", "district", "province", "postalCode"],
@@ -36,10 +36,10 @@ db.createCollection("staff", {
             }
           }
         },
-        "email": {
+        "staffEmail": {
           "bsonType": "string"
         },
-        "phone": {
+        "staffPhone": {
           "bsonType": "string"
         }
       }
@@ -205,17 +205,7 @@ db.createCollection("form", {
     $jsonSchema: {
       bsonType: "object",
       title: "form",
-      required: [
-        "formId",
-        "form_date",
-        "username",
-        "email",
-        "phone",
-        "date_in",
-        "date_out",
-        "staffId",
-        "dormId"
-      ],
+      required: ["formId", "form_date", "name", "email", "phone", "date_in", "date_out", "description", "staffId", "dormId"],
       properties: {
         formId: {
           bsonType: "int"
@@ -223,7 +213,7 @@ db.createCollection("form", {
         form_date: {
           bsonType: "date"
         },
-        username: {
+        name: {
           bsonType: "string"
         },
         email: {
@@ -237,6 +227,9 @@ db.createCollection("form", {
         },
         date_out: {
           bsonType: "date"
+        },
+		description: {
+          bsonType: "string"
         },
         staffId: {
           bsonType: "int"

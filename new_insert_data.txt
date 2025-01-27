@@ -3,7 +3,7 @@ db.staff.insertMany([
   {
     "staffId": 1,
     "staffName": "Somchai Jaid",
-    "address": {
+    "staffAddress": {
 	  "dormNumber": "111",
       "street": "123/4 Sukhumvit Road",
       "subdistrict": "Khlong Tan",
@@ -11,13 +11,13 @@ db.staff.insertMany([
       "province": "Bangkok",
       "postalCode": "10110"
     },
-    "email": "somchai.jaid@gmail.com",
-    "phone": "0812345678"
+    "staffEmail": "somchai.jaid@gmail.com",
+    "staffPhone": "0812345678"
   },
   {
     "staffId": 2,
     "staffName": "Ornthai Suayngam",
-    "address": {
+    "staffAddress": {
 	  "dormNumber": "222",
       "street": "456/7 Rama IX Road",
       "subdistrict": "Suan Luang",
@@ -25,13 +25,13 @@ db.staff.insertMany([
       "province": "Bangkok",
       "postalCode": "10250"
     },
-    "email": "ornthai.suayngam@gmail.com",
-    "phone": "0823456789"
+    "staffEmail": "ornthai.suayngam@gmail.com",
+    "staffPhone": "0823456789"
   },
   {
     "staffId": 3,
     "staffName": "Prapha Saensuk",
-    "address": {
+    "staffAddress": {
 	  "dormNumber": "333",
       "street": "789/8 Charoen Krung Road",
       "subdistrict": "Bang Rak",
@@ -39,8 +39,8 @@ db.staff.insertMany([
       "province": "Bangkok",
       "postalCode": "10500"
     },
-    "email": "prapha.saensuk@gmail.com",
-    "phone": "0834567890"
+    "staffEmail": "prapha.saensuk@gmail.com",
+    "staffPhone": "0834567890"
   }
 ]);
 
@@ -99,33 +99,36 @@ db.form.insertMany([
   {
     formId: 1,
     form_date: new Date("2025-01-15"),
-    username: "somchai123",
+    name: "somchai123",
     email: "somchai@example.com",
     phone: "0812345678",
     date_in: new Date("2025-01-20"),
     date_out: new Date("2025-01-25"),
+	description: "good dormitory",
     staffId: 1,
     dormId: 1
   },
   {
     formId: 2,
     form_date: new Date("2025-01-16"),
-    username: "arisa999",
+    name: "arisa999",
     email: "arisa@example.com",
     phone: "0865432109",
     date_in: new Date("2025-01-22"),
     date_out: new Date("2025-01-28"),
+	description: "what about your new dormitory?",
     staffId: 2,
     dormId: 2
   },
   {
     formId: 3,
     form_date: new Date("2025-01-17"),
-    username: "preecha456",
+    name: "preecha456",
     email: "preecha@example.com",
     phone: "0856781234",
     date_in: new Date("2025-02-01"),
     date_out: new Date("2025-02-07"),
+	description: "good location",
     staffId: 3,
     dormId: 3
 	 }
