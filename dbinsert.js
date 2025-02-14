@@ -99,7 +99,7 @@ db.form.insertMany([
 // dormitorys
 db.dormitory.insertOne({
     "dormId": 1,
-    "name": "The Cozy Dorm",
+    "dormName": "The Cozy Dorm",
     "status": "empty",
     "address": {
 	  "dormNumber": "111",
