@@ -118,10 +118,12 @@ db.dormitory.insertOne({
     "created_at": new Date("2024-11-15T12:00:00Z"),
     "updated_at": new Date("2024-11-04T12:00:00Z"),
     "image": [
-      
+      "https://example.com/image1.jpg",
+      "https://example.com/image2.jpg"
     ],
     "building_facility": ["CCTV","WiFi","24-hour security"],
-    "room_facility": ["Air conditioning","Private bathroom","Desk"],
+    "room_facility": ["Air conditioning","Desk"],
+	"count_facilities": 5,
+	"score": 3,
     "staffId": 1
 });
-
