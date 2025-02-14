@@ -1,5 +1,3 @@
-use dormitories;
-
 // staff
 db.createCollection("staff", {
   validator: {
