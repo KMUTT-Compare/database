@@ -45,37 +45,6 @@ db.staff.insertMany([
 ]);
 
 
----------USERS-----------
-db.user.insertMany([
-  {
-    "userId": 1,
-    "username": "john_doe",
-    "password": "password123",
-    "email": "john.doe@example.com",
-    "role": "admin",
-    "createdOn": new Date("2024-05-11T12:00:00Z"), 
-    "updatedOn": new Date("2024-05-31T12:00:00Z")  
-  },
-  {
-    "userId": 2,
-    "username": "jane_smith",
-    "password": "securePass456",
-    "email": "jane.smith@example.com",
-    "role": "user",
-    "createdOn": new Date("2024-06-15T12:00:00Z"), 
-    "updatedOn": new Date("2024-07-08T12:00:00Z")  
-  },
-  {
-    "userId": 3,
-    "username": "guest_user",
-    "password": "guestPass789",
-    "email": "guest@example.com",
-    "role": "guest",
-    "createdOn": new Date("2024-07-22T12:00:00Z"),
-    "updatedOn": new Date("2024-08-15T12:00:00Z")  
-  }
-]);
-
 ---------FAVORITES-----------
 db.favorite.insertMany([
   {
@@ -137,3 +106,28 @@ db.form.insertMany([
 	 }
 ]);
 
+---------USERS-----------
+db.user.insertMany([
+  {
+    "userId": 1,
+    "username": "johnDo",
+	"name":"Jonh Doeily",
+    "password": "password123",
+    "email": "john.doe@example.com",
+	"phone": "0812345678",
+    "role": "admin",
+    "createdOn": new Date("2024-05-11T12:00:00Z"), 
+    "updatedOn": new Date("2024-05-31T12:00:00Z")  
+  },
+  {
+    "userId": 2,
+    "username": "janee",
+	"name":"Jane Smith",
+    "password": "securePass456",
+    "email": "jane.smith@example.com",
+	"phone": "0819999999",
+    "role": "user",
+    "createdOn": new Date("2024-06-15T12:00:00Z"), 
+    "updatedOn": new Date("2024-07-08T12:00:00Z")  
+  }
+]);

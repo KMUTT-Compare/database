@@ -47,39 +47,6 @@ db.createCollection("staff", {
   }
 });
 ---------------
-db.createCollection("user", {
-  validator: {
-    $jsonSchema: {
-      "bsonType": "object",
-      "title": "user",
-      "required": ["userId", "username", "password", "email", "role", "createdOn", "updatedOn"],
-      "properties": {
-        "userId": {
-          "bsonType": "int"
-        },
-        "username": {
-          "bsonType": "string"
-        },
-        "password": {
-          "bsonType": "string"
-        },
-        "email": {
-          "bsonType": "string"
-        },
-        "role": {
-          "enum": ['admin', 'user', 'guest']
-        },
-        "createdOn": {
-          "bsonType": "date"
-        },
-        "updatedOn": {
-          "bsonType": "date"
-        }
-      }
-    }
-  }
-});
----------------
 db.createCollection("dormitory", {
   validator: {
     $jsonSchema: {
@@ -239,6 +206,45 @@ db.createCollection("form", {
         },
 		userId: {
           bsonType: "int"
+        }
+      }
+    }
+  }
+});
+---------------
+db.createCollection("user", {
+  validator: {
+    $jsonSchema: {
+      "bsonType": "object",
+      "title": "user",
+      "required": ["userId", "username", "name", "password", "email", "phone", "role", "createdOn", "updatedOn"],
+      "properties": {
+        "userId": {
+          "bsonType": "int"
+        },
+        "username": {
+          "bsonType": "string"
+        },
+		"name": {
+          "bsonType": "string"
+        },
+        "password": {
+          "bsonType": "string"
+        },
+        "email": {
+          "bsonType": "string"
+        },
+		"phone": {
+          "bsonType": "string"
+        },
+        "role": {
+          "enum": ['admin', 'user', 'guest']
+        },
+        "createdOn": {
+          "bsonType": "date"
+        },
+        "updatedOn": {
+          "bsonType": "date"
         }
       }
     }
