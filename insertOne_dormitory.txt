@@ -27,7 +27,7 @@ db.dormitory.insertOne({
     "room_facility": ["Air conditioning","Desk"],
 	"count_facilities": 5,
 	"score": 3,
-    "staffId": 1
+    "userId": 1
 });
 
 --2
@@ -67,7 +67,7 @@ db.dormitory.insertOne({
     ],
 	"count_facilities": 6,
 	"score": 2,
-    "staffId": 2
+    "userId": 2
   });
   
   
@@ -108,7 +108,7 @@ db.dormitory.insertOne({
     ],
 	"count_facilities": 6,
 	"score": 5,
-    "staffId": 3
+    "userId": 3
   });
   
   

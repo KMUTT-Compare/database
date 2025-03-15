@@ -1,58 +1,9 @@
-db.createCollection("staff", {
-  validator: {
-    $jsonSchema: {
-      "bsonType": "object",
-      "title": "staff",
-      "required": ["staffId", "staffName", "staffAddress", "staffEmail", "staffPhone"],
-      "properties": {
-        "staffId": {
-          "bsonType": "int"
-        },
-        "staffName": {
-          "bsonType": "string"
-        },
-        "staffAddress": {
-          "bsonType": "object",
-          "title": "object",
-          "required": ["dormNumber", "street", "subdistrict", "district", "province", "postalCode"],
-          "properties": {
-		  	"dormNumber": {
-              "bsonType": "string"
-            },
-            "street": {
-              "bsonType": "string"
-            },
-            "subdistrict": {
-              "bsonType": "string"
-            },
-            "district": {
-              "bsonType": "string"
-            },
-            "province": {
-              "bsonType": "string"
-            },
-            "postalCode": {
-              "bsonType": "string"
-            }
-          }
-        },
-        "staffEmail": {
-          "bsonType": "string"
-        },
-        "staffPhone": {
-          "bsonType": "string"
-        }
-      }
-    }
-  }
-});
----------------
 db.createCollection("dormitory", {
   validator: {
     $jsonSchema: {
       "bsonType": "object",
       "title": "dormitory",
-      "required": ["dormId", "dormName", "status", "address", "roomCount", "type", "size", "min_price", "max_price", "distance", "created_at", "updated_at", "building_facility", "room_facility", "count_facilities",  "score", "staffId"],
+      "required": ["dormId", "dormName", "status", "address", "roomCount", "type", "size", "min_price", "max_price", "distance", "created_at", "updated_at", "building_facility", "room_facility", "count_facilities",  "score", "userId"],
       "properties": {
         "dormId": {
           "bsonType": "int"
@@ -136,7 +87,7 @@ db.createCollection("dormitory", {
 		"score": {
           "bsonType": "int"
         },
-        "staffId": {
+        "userId": {
           "bsonType": "int"
         }
       }
@@ -172,7 +123,7 @@ db.createCollection("form", {
     $jsonSchema: {
       bsonType: "object",
       title: "form",
-      required: ["formId", "form_date", "name", "email", "phone", "date_in", "date_out", "description", "staffId", "dormId", "userId"],
+      required: ["formId", "form_date", "name", "email", "phone", "date_in", "date_out", "description", "dormId", "userId"],
       properties: {
         formId: {
           bsonType: "int"
@@ -197,9 +148,6 @@ db.createCollection("form", {
         },
 		description: {
           bsonType: "string"
-        },
-        staffId: {
-          bsonType: "int"
         },
         dormId: {
           bsonType: "int"
