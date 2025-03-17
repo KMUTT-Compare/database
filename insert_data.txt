@@ -53,8 +53,8 @@ db.user.insertMany([
     "userId": 1,
     "username": "johnDo",
 	"name":"Jonh Doeily",
-    "password": "password123",
-    "email": "john.doe@example.com",
+    "password": "$argon2id$v=19$m=16384,t=2,p=1$RY1vk5ECcVnJD5hIf2vyVg$RE6uKykYR5WpQI8GKtYUhKNfZSf9fG+fhn4+WS3+Piw",
+    "email": "test01@example.com",
 	"phone": "0812345678",
     "role": "admin",
     "createdOn": new Date("2024-05-11T12:00:00Z"), 
@@ -65,12 +65,21 @@ db.user.insertMany([
     "userId": 2,
     "username": "janee",
 	"name":"Jane Smith",
-    "password": "securePass456",
-    "email": "jane.smith@example.com",
-	"phone": "0819999999",
+    "password": "$argon2id$v=19$m=16384,t=2,p=1$RpvMJVuDGItBmCCMAreF8g$IRHXTqnN7vXUjE2DrRINn6oy/pk4bk6fQ7+LgBdIEAE",
+    "email": "test02@example.com",
+	"phone": "0999999999",
     "role": "user",
     "createdOn": new Date("2024-06-15T12:00:00Z"), 
     "updatedOn": new Date("2024-07-08T12:00:00Z"),
 	"isActive": false
   }
 ]);
+
+
+
+
+
+
+old-password::
+password123
+securePass456
