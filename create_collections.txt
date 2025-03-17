@@ -156,7 +156,7 @@ db.createCollection("user", {
     $jsonSchema: {
       "bsonType": "object",
       "title": "user",
-      "required": ["userId", "username", "name", "password", "email", "phone", "role", "createdOn", "updatedOn"],
+      "required": ["userId", "username", "name", "password", "email", "phone", "role", "createdOn", "updatedOn", "isActive"],
       "properties": {
         "userId": {
           "bsonType": "int"
@@ -184,6 +184,9 @@ db.createCollection("user", {
         },
         "updatedOn": {
           "bsonType": "date"
+        },
+        "isActive": {
+          "bsonType": "bool"
         }
       }
     }
