@@ -1,92 +1,10 @@
-// staff
-db.createCollection("staff", {
-  validator: {
-    $jsonSchema: {
-      "bsonType": "object",
-      "title": "staff",
-      "required": ["staffId", "staffName", "staffAddress", "staffEmail", "staffPhone"],
-      "properties": {
-        "staffId": {
-          "bsonType": "int"
-        },
-        "staffName": {
-          "bsonType": "string"
-        },
-        "staffAddress": {
-          "bsonType": "object",
-          "title": "object",
-          "required": ["dormNumber", "street", "subdistrict", "district", "province", "postalCode"],
-          "properties": {
-		  	"dormNumber": {
-              "bsonType": "string"
-            },
-            "street": {
-              "bsonType": "string"
-            },
-            "subdistrict": {
-              "bsonType": "string"
-            },
-            "district": {
-              "bsonType": "string"
-            },
-            "province": {
-              "bsonType": "string"
-            },
-            "postalCode": {
-              "bsonType": "string"
-            }
-          }
-        },
-        "staffEmail": {
-          "bsonType": "string"
-        },
-        "staffPhone": {
-          "bsonType": "string"
-        }
-      }
-    }
-  }
-});
-// user
-db.createCollection("user", {
-  validator: {
-    $jsonSchema: {
-      "bsonType": "object",
-      "title": "user",
-      "required": ["userId", "username", "password", "email", "role", "createdOn", "updatedOn"],
-      "properties": {
-        "userId": {
-          "bsonType": "int"
-        },
-        "username": {
-          "bsonType": "string"
-        },
-        "password": {
-          "bsonType": "string"
-        },
-        "email": {
-          "bsonType": "string"
-        },
-        "role": {
-          "enum": ['admin', 'user', 'guest']
-        },
-        "createdOn": {
-          "bsonType": "date"
-        },
-        "updatedOn": {
-          "bsonType": "date"
-        }
-      }
-    }
-  }
-});
-// dormitory
+// Dormitories
 db.createCollection("dormitory", {
   validator: {
     $jsonSchema: {
       "bsonType": "object",
       "title": "dormitory",
-      "required": ["dormId", "dormName", "status", "address", "roomCount", "type", "size", "min_price", "max_price", "distance", "created_at", "updated_at", "building_facility", "room_facility", "count_facilities",  "score", "staffId"],
+      "required": ["dormId", "dormName", "status", "address", "roomCount", "type", "size", "min_price", "max_price", "distance", "created_at", "updated_at", "building_facility", "room_facility", "count_facilities",  "score", "userId"],
       "properties": {
         "dormId": {
           "bsonType": "int"
@@ -170,7 +88,7 @@ db.createCollection("dormitory", {
 		"score": {
           "bsonType": "int"
         },
-        "staffId": {
+        "userId": {
           "bsonType": "int"
         }
       }
@@ -179,6 +97,50 @@ db.createCollection("dormitory", {
   "validationLevel": "strict",
   "validationAction": "error"
 });
+
+// user
+db.createCollection("user", {
+  validator: {
+    $jsonSchema: {
+      "bsonType": "object",
+      "title": "user",
+      "required": ["userId", "username", "name", "password", "email", "phone", "role", "createdOn", "updatedOn", "isActive"],
+      "properties": {
+        "userId": {
+          "bsonType": "int"
+        },
+        "username": {
+          "bsonType": "string"
+        },
+		"name": {
+          "bsonType": "string"
+        },
+        "password": {
+          "bsonType": "string"
+        },
+        "email": {
+          "bsonType": "string"
+        },
+		"phone": {
+          "bsonType": "string"
+        },
+        "role": {
+          "enum": ['admin', 'user', 'guest']
+        },
+        "createdOn": {
+          "bsonType": "date"
+        },
+        "updatedOn": {
+          "bsonType": "date"
+        },
+        "isActive": {
+          "bsonType": "bool"
+        }
+      }
+    }
+  }
+});
+
 // favorite
 db.createCollection("favorite", {
   validator: {
@@ -200,46 +162,35 @@ db.createCollection("favorite", {
     }
   }
 });
+
 // form
 db.createCollection("form", {
   validator: {
     $jsonSchema: {
-      bsonType: "object",
-      title: "form",
-      required: ["formId", "form_date", "name", "email", "phone", "date_in", "date_out", "description", "staffId", "dormId", "userId"],
-      properties: {
-        formId: {
-          bsonType: "int"
+      "bsonType": "object",
+      "title": "form",
+      "required": ["formId", "form_date", "userId", "date_in", "date_out", "description", "dormId"],
+      "properties": {
+        "formId": {
+          "bsonType": "int"
         },
-        form_date: {
-          bsonType: "date"
+        "form_date": {
+          "bsonType": "date"
         },
-        name: {
-          bsonType: "string"
+		"userId": {
+          "bsonType": "int"
         },
-        email: {
-          bsonType: "string"
+        "date_in": {
+          "bsonType": "date"
         },
-        phone: {
-          bsonType: "string"
+        "date_out": {
+          "bsonType": "date"
         },
-        date_in: {
-          bsonType: "date"
+		"description": {
+          "bsonType": "string"
         },
-        date_out: {
-          bsonType: "date"
-        },
-		description: {
-          bsonType: "string"
-        },
-        staffId: {
-          bsonType: "int"
-        },
-        dormId: {
-          bsonType: "int"
-        },
-		userId: {
-          bsonType: "int"
+        "dormId": {
+          "bsonType": "int"
         }
       }
     }

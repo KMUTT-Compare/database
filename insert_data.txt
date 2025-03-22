@@ -78,8 +78,6 @@ db.user.insertMany([
 
 
 
-
-
 old-password::
 password123
 securePass456
