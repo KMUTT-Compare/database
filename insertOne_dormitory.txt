@@ -26,7 +26,10 @@ db.dormitory.insertOne({
     "building_facility": ["CCTV","WiFi","24-hour security"],
     "room_facility": ["Air conditioning","Desk"],
 	"count_facilities": 5,
-	"score": 3,
+	"rating": {
+	  "totalScore": Decimal128.fromString("10"),
+      "count_votes": 2
+    },
     "userId": 1
 });
 
@@ -66,7 +69,10 @@ db.dormitory.insertOne({
       "WiFi"
     ],
 	"count_facilities": 6,
-	"score": 2,
+	"rating": {
+	  "totalScore": Decimal128.fromString("3"),
+      "count_votes": 1
+    },
     "userId": 2
   });
   
@@ -107,7 +113,10 @@ db.dormitory.insertOne({
       "Desk"
     ],
 	"count_facilities": 6,
-	"score": 5,
+	"rating": {
+	  "totalScore": Decimal128.fromString("4"),
+      "count_votes": 1
+    },
     "userId": 3
   });
   
