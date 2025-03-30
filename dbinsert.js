@@ -41,25 +41,33 @@ db.user.insertMany([
   ]);
 
 // forms
-db.form.insertMany([
-  {
-    "formId": 1,
-    "form_date": new Date("2025-01-15"),
-	"userId": 1,
-    "date_in": new Date("2025-01-20"),
-    "date_out": new Date("2025-01-25"),
-	"description": "good dormitory",
-    "dormId": 1
-  },
-  {
-    "formId": 2,
-    "form_date": new Date("2025-01-16"),
-	"userId": 2,
-    "date_in": new Date("2025-01-22"),
-    "date_out": new Date("2025-01-28"),
-	"description": "what about your new dormitory?",
-    "dormId": 2
-  }
+  db.form.insertMany([
+    {
+      formId: 1,
+      form_date: new Date("2025-01-15"),
+      userId: 1,
+      name: "Alice",
+      email: "alice@example.com",
+      phone: "0812345678",
+      date_in: new Date("2025-01-20"),
+      date_out: new Date("2025-01-25"),
+      description: "Good dormitory",
+      dormId: 1,
+      status: "reserved"  // เพิ่ม status ตามโครงสร้าง
+    },
+    {
+      formId: 2,
+      form_date: new Date("2025-01-16"),
+      userId: 2,
+      name: "Bob",
+      email: "bob@example.com",
+      phone: "0898765432",
+      date_in: new Date("2025-01-22"),
+      date_out: new Date("2025-01-28"),
+      description: "What about your new dormitory?",
+      dormId: 2,
+      status: "checkIn"  // เพิ่ม status ตามโครงสร้าง
+    }
 ]);
   
 // dormitorys
@@ -90,7 +98,10 @@ db.dormitory.insertOne({
   "building_facility": ["CCTV","WiFi","24-hour security"],
   "room_facility": ["Air conditioning","Desk"],
 "count_facilities": 5,
-"score": 3,
+"rating": {
+  "totalScore": Decimal128.fromString("10"),
+    "count_votes": 2
+  },
   "userId": 1
 });
 

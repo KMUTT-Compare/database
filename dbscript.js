@@ -4,7 +4,7 @@ db.createCollection("dormitory", {
     $jsonSchema: {
       "bsonType": "object",
       "title": "dormitory",
-      "required": ["dormId", "dormName", "status", "address", "roomCount", "type", "size", "min_price", "max_price", "distance", "created_at", "updated_at", "building_facility", "room_facility", "count_facilities",  "score", "userId"],
+      "required": ["dormId", "dormName", "status", "address", "roomCount", "type", "size", "min_price", "max_price", "distance", "created_at", "updated_at", "building_facility", "room_facility", "count_facilities",  "rating", "userId"],
       "properties": {
         "dormId": {
           "bsonType": "int"
@@ -85,8 +85,18 @@ db.createCollection("dormitory", {
 		"count_facilities": {
           "bsonType": "int"
         },
-		"score": {
-          "bsonType": "int"
+        "rating": {
+          "bsonType": "object",
+          "title": "object",
+          "required": ["totalScore", "count_votes"],
+          "properties": {
+			"totalScore": {
+              "bsonType": "decimal"
+            },
+            "count_votes": {
+              "bsonType": "int"
+            }
+          }
         },
         "userId": {
           "bsonType": "int"
@@ -169,7 +179,7 @@ db.createCollection("form", {
     $jsonSchema: {
       "bsonType": "object",
       "title": "form",
-      "required": ["formId", "form_date", "userId", "date_in", "date_out", "description", "dormId"],
+      "required": ["formId", "form_date", "name", "email", "phone", "userId", "date_in", "date_out", "description", "dormId", "status"],
       "properties": {
         "formId": {
           "bsonType": "int"
@@ -177,8 +187,17 @@ db.createCollection("form", {
         "form_date": {
           "bsonType": "date"
         },
-		"userId": {
+        "userId": {
           "bsonType": "int"
+        },
+        "name": {
+          "bsonType": "string"
+        },
+        "email": {
+          "bsonType": "string"
+        },
+        "phone": {
+          "bsonType": "string"
         },
         "date_in": {
           "bsonType": "date"
@@ -186,11 +205,14 @@ db.createCollection("form", {
         "date_out": {
           "bsonType": "date"
         },
-		"description": {
+        "description": {
           "bsonType": "string"
         },
         "dormId": {
           "bsonType": "int"
+        },
+		"status": {
+          "enum": ['reserved', 'checkIn', 'success']
         }
       }
     }
